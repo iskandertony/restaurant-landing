@@ -1,11 +1,12 @@
-import "./Home.scss"
+import "./Home.scss";
+import Menu from "./Menu/Menu";
 
 const Home = () => {
   return (
     <>
-
+      <Menu />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

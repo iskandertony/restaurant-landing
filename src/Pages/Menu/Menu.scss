@@ -1,11 +1,10 @@
 @import "../../Styles/Colors.scss";
 
-.header {
-  padding: 25px 0px;
-  background-color: $color-header;
+.menu {
+  padding-top: 100px;
 }
 
-.header_content {
+.menu_content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,14 +12,20 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-.header_list {
+.menu_ {
   display: flex;
+  flex-wrap: wrap;
 }
-
-.header_item {
+.menu_list {
+  display: flex;
+  padding: 60px;
+  border: 2px solid wheat;
+  border-radius: 8px;
   margin-right: 16px;
+  margin-bottom: 16px;
+  
 }
 
-.header_login {
+.menu_item {
+
 }
