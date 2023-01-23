@@ -18,14 +18,34 @@
 }
 .menu_list {
   display: flex;
-  padding: 60px;
+  padding: 16px;
   border: 2px solid wheat;
   border-radius: 8px;
   margin-right: 16px;
   margin-bottom: 16px;
-  
+  width: 20vw;
+  overflow: hidden;
+  height: 10vw;
 }
 
 .menu_item {
+}
+.cart {
 
+}
+.cart_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid wheat;
+  border-radius: 8px;
+  height: 400px;
+  padding: 16px;
+  
+}
+
+
+.menu_img {
+  max-width: 100px;
 }

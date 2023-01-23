@@ -1,5 +1,5 @@
 import "./Menu.scss";
-
+import Hamburger from "../../Imgs/Humburger.png"
 const Menu = () => {
   const MenuFood = [
     {
@@ -7,7 +7,7 @@ const Menu = () => {
       discount: "",
       description: "мясо,лук,кетчуп,булки,овощи",
       price: "120",
-      img: "img",
+      img: Hamburger,
     },
     {
       name: "Гамбургер",
@@ -39,7 +39,7 @@ const Menu = () => {
             {MenuFood.map((item) => (
               <div className="menu_list">
                 <div>
-                  <div className="menu_item">{item.img}</div>
+                  <img src={item.img} className="menu_img"></img>
                   <div className="menu_item">{item.price}</div>
                 </div>
                 <div>
@@ -51,7 +51,13 @@ const Menu = () => {
             ))}
           </div>
 
-          <div>Korzina</div>
+          <div className="cart">
+            <div className="cart_content">
+              <div className="cart_header">Ваш заказ</div>
+              <div className="cart_list">все что выбрали </div>
+              <div className="cart_footer">Пока что корзина пуста. Добавленные вами продукты будут отображаться здесь!</div>
+            </div>
+          </div>
         </div>
       </div>
     </>
