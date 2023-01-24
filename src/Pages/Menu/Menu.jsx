@@ -1,5 +1,6 @@
 import "./Menu.scss";
-import Hamburger from "../../Imgs/Humburger.png"
+import { Button } from "antd";
+import Hamburger from "../../Imgs/Humburger.png";
 const Menu = () => {
   const MenuFood = [
     {
@@ -14,21 +15,21 @@ const Menu = () => {
       discount: "",
       description: "мясо,лук,кетчуп,булки,овощи",
       price: "120",
-      img: "img",
+      img: Hamburger,
     },
     {
       name: "Гамбургер",
       discount: "",
       description: "мясо,лук,кетчуп,булки,овощи",
       price: "120",
-      img: "img",
+      img: Hamburger,
     },
     {
       name: "Гамбургер",
       discount: "",
       description: "мясо,лук,кетчуп,булки,овощи",
       price: "120",
-      img: "img",
+      img: Hamburger,
     },
   ];
   return (
@@ -38,14 +39,20 @@ const Menu = () => {
           <div className="menu_">
             {MenuFood.map((item) => (
               <div className="menu_list">
-                <div>
-                  <img src={item.img} className="menu_img"></img>
-                  <div className="menu_item">{item.price}</div>
+                <div className="menu_item_content_">
+                  <div>
+                    <img src={item.img} className="menu_img"></img>
+                  </div>
+
+                  <div>
+                    <div className="menu_item_name">{item.name}</div>
+                    <div className="menu_item_text">{item.discount}</div>
+                    <div className="menu_item_text">{item.description}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="menu_item">{item.name}</div>
-                  <div className="menu_item">{item.discount}</div>
-                  <div className="menu_item">{item.description}</div>
+                <div className="menu_item_content">
+                  <div className="menu_item">{item.price}</div>
+                  <button className="button">+</button>
                 </div>
               </div>
             ))}
@@ -55,7 +62,10 @@ const Menu = () => {
             <div className="cart_content">
               <div className="cart_header">Ваш заказ</div>
               <div className="cart_list">все что выбрали </div>
-              <div className="cart_footer">Пока что корзина пуста. Добавленные вами продукты будут отображаться здесь!</div>
+              <div className="cart_footer">
+                Пока что корзина пуста. Добавленные вами продукты будут
+                отображаться здесь!
+              </div>
             </div>
           </div>
         </div>
