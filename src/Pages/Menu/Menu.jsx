@@ -36,10 +36,10 @@ const Menu = () => {
     <>
       <div className="menu">
         <div className="menu_content">
-          <div className="menu_">
+          <div className="menu_container">
             {MenuFood.map((item) => (
               <div className="menu_list">
-                <div className="menu_item_content_">
+                <div className="menu_item_info">
                   <div>
                     <img src={item.img} className="menu_img"></img>
                   </div>
@@ -50,7 +50,7 @@ const Menu = () => {
                     <div className="menu_item_text">{item.description}</div>
                   </div>
                 </div>
-                <div className="menu_item_content">
+                <div className="menu_item_prize">
                   <div className="menu_item">{item.price}</div>
                   <button className="button">+</button>
                 </div>
