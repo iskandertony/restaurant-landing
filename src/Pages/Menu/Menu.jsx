@@ -1,7 +1,19 @@
-import "./Menu.scss";
+import React, { useState } from "react";
+
 import { Button } from "antd";
 import Hamburger from "../../Imgs/Humburger.png";
+
+import "./Menu.scss";
+
 const Menu = () => {
+  const [menu, setMenu] = useState([]);
+  const [chose, setChose] = useState(null);
+
+  const handleMenu = (i) => {
+    setChose(i);
+    console.log("menu:", MenuFood);
+  };
+
   const MenuFood = [
     {
       name: "Гамбургер",
@@ -37,7 +49,7 @@ const Menu = () => {
       <div className="menu">
         <div className="menu_content">
           <div className="menu_container">
-            {MenuFood.map((item) => (
+            {MenuFood.map((item, i) => (
               <div className="menu_list">
                 <div className="menu_item_info">
                   <div>
@@ -52,7 +64,9 @@ const Menu = () => {
                 </div>
                 <div className="menu_item_prize">
                   <div className="menu_item">{item.price}</div>
-                  <button className="button">+</button>
+                  <button className="button" onClick={(i) => handleMenu()}>
+                    +
+                  </button>
                 </div>
               </div>
             ))}
