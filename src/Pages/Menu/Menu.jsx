@@ -15,7 +15,6 @@ const Menu = () => {
     setCartProducts([...cartProducts, productID]);
   };
 
-  
   return (
     <>
       <div className="menu">
@@ -59,31 +58,31 @@ const Menu = () => {
             })}
           </div>
 
-          {cartProducts.length > 0
-          ? cartProducts.map(productID => {
-              const productIndex = products.findIndex(product => {
-                return product.id === productID;
-              });
-              let { name, id, price, photo } = products[productIndex];
-              return (
-               <div className="cart_content">
-                <div>{name}</div>
-               </div>
-              );
-            })
-          :  <div className="cart">
-          <div className="cart_content">
-            <div className="cart_header">Ваш заказ</div>
-            <div className="cart_list">все что выбрали </div>
-            <div className="cart_footer">
-              Пока что корзина пуста. Добавленные вами продукты будут
-              отображаться здесь!
-            </div>
+          <div className="cart">
+            {cartProducts.length > 0 ? (
+              cartProducts.map((productID) => {
+                const productIndex = products.findIndex((product) => {
+                  return product.id === productID;
+                });
+                let { name, id, price, img } = products[productIndex];
+                return (
+                  <>
+                    <div>{name}</div>
+                    <div><img src={img} className="menu_img"></img></div>
+                  </>
+                );
+              })
+            ) : (
+              <div className="cart_content">
+                <div className="cart_header">Ваш заказ</div>
+                <div className="cart_list">все что выбрали </div>
+                <div className="cart_footer">
+                  Пока что корзина пуста. Добавленные вами продукты будут
+                  отображаться здесь!
+                </div>
+              </div>
+            )}
           </div>
-        </div>}
-
-        
-          
         </div>
       </div>
     </>

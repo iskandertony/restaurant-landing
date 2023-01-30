@@ -1,3 +1,6 @@
+import { Routes, Route, Navigate } from "react-router-dom";
+
+
 import React from "react";
 
 import "./App.scss";
@@ -9,7 +12,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Home />
+      <Routes>
+        <Route />
+        <Route path="/" element={<Home/>} />      
+      </Routes>
+  
       <Footer />
     </div>
   );

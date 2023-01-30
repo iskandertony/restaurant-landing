@@ -22,16 +22,18 @@
 }
 
 .cart {
+  display: flex;
+  border: 2px solid wheat;
+  border-radius: 8px;
+  height: 400px;
+  padding: 16px;
 }
 .cart_content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid wheat;
-  border-radius: 8px;
-  height: 400px;
-  padding: 16px;
+  
 }
 .menu_list {
   display: flex;
